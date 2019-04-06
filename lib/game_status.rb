@@ -17,17 +17,17 @@ WIN_COMBINATIONS = [[0,1,2],
 
 def get_locations(board, player = "X")
   locations = []
-  location = 0 
+  location = 0
   while(location < 9) do
     if board[location].strip == player.strip
       locations << location
     end
-    location += 1 
+    location += 1
   end
   return locations
 end
 
-def won?(board) 
+def won?(board)
   x_locations = get_locations(board)
   y_locations = get_locations(board, "O")
   locations = [x_locations,y_locations]
